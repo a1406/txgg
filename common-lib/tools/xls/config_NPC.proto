@@ -1,0 +1,11 @@
+message CFG_NPC
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	repeated int32 func = 3;
+}
+
+message CFG_NPCS
+{
+	repeated CFG_NPC npc = 1;
+}

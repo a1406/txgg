@@ -1,0 +1,34 @@
+enum INSTANCE_ACTION
+{
+	TYPE_NULL = 1;  //空白格子：失去效果的空白格子，停留在上不会发生任何事件
+	TYPE_START = 2; //起始格子：玩家起始所在格子
+	TYPE_END = 3;   //BOSS格子：也为终点格。每个副本结束以是否遇到BOSS格为最终判断。遇见后进行战斗，不论是否战胜BOSS，副本结束。
+	TYPE_FIGHT = 4; //战斗格子：玩家进入战斗。结束后变为空白格子
+	TYPE_TRAP = 5;  //陷阱格子：玩家触发后损失生命
+	TYPE_RAND = 6;  //随机格子：当停留在此类格子上，会触发随机的事件，包括进入神秘商店、获得属性buff或debuff、抽取元宝和遭遇战斗等
+	TYPE_HEAL = 7;  //治疗格子：可恢复少量的HP
+	TYPE_STOP = 8;  //停留格子
+	TYPE_FORWARD = 9; //前进格
+	TYPE_BACKWARD = 10; //后退格
+	TYPE_LUCK = 11;   //幸运格：触发后可提升概率。
+	TYPE_QUEST = 12;      //剧情格子：触犯剧情，会有对话出现，为副本内置小任务，完成在副本之内
+	TYPE_ELITE = 13;      //精英格子：为战斗格子，出现怪物为精英怪
+	TYPE_MONEY = 14; //银两格子：可随机获得银两
+	TYPE_CONTAINER = 15; //宝箱格：可以随机抽取宝箱一次。里面随机产生银两，装备，经验，属性石。
+	TYPE_TRANSPORT = 16; //传送格：传送到指定的传送格。传送格为双向传送，每个副本如果出现传送格则为2个传送个。
+}
+
+message CFG_INSTANCE_MAP_NODE
+{
+	required int32 id = 1;      //(x << 16) | y
+	required int32 action = 4;
+	required int32 last_id = 5;
+	required int32 next_id1 = 6;
+	required int32 next_id2 = 7;
+	required int32 next_id3 = 8;
+}
+
+message CFG_INSTANCE_MAP
+{
+	repeated CFG_INSTANCE_MAP_NODE node = 1;
+}

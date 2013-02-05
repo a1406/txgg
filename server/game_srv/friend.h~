@@ -1,7 +1,0 @@
-#ifndef _GAMESRV_FRIEND_H__
-#define _GAMESRV_FRIEND_H__
-#include "game_queue.h"
-#include <stdint.h>
-#include "idx.h"
-#include "thing_obj.h"
-#include "game_define.h"

@@ -1,0 +1,496 @@
+//package com.koala.data.proto;
+
+enum CS_MESSAGE_ID
+{
+	REFRESH_SIGHT_NOTIFY = 1;   //视野刷新, 使用最频繁
+
+	LOGIN_REQUEST = 2;           //登陆
+	LOGIN_RESPONSE = 3;
+	LOGOUT_REQUEST = 4;          //登出
+	LOGOUT_RESPONSE = 5;	
+	CREATEROLE_REQUEST = 6;      //创建角色
+	CREATEROLE_RESPONSE = 7;
+
+	MOVE_REQUEST = 8;           //移动
+	MOVE_RESPONSE = 9;
+	MOVE_NOTIFY = 10;
+	TRANSPORT_REQUEST = 11;           //跳转
+	TRANSPORT_RESPONSE = 12;
+
+	USE_CONTAINER_ITEM_REQUEST = 17;     //背包仓库  使用物品
+	USE_CONTAINER_ITEM_RESPONSE = 18;     //背包仓库  使用物品
+
+	SORT_CONTAINER_REQUEST = 19;         //背包仓库  整理背包
+	SORT_CONTAINER_RESPONSE = 20;         //背包仓库  整理背包
+
+	SWAP_CONTAINER_ITEM_REQUEST = 21;    //背包仓库  交换物品位置
+	SWAP_CONTAINER_ITEM_RESPONSE = 22;    //背包仓库  交换物品位置
+
+	LIST_CONTAINER_ITEM_REQUEST = 23;    //背包仓库  获取所有物品
+	LIST_CONTAINER_ITEM_RESPONSE = 24;    //背包仓库  获取所有物品
+
+	DROP_CONTAINER_ITEM_REQUEST = 25;    //背包仓库  丢弃物品
+	DROP_CONTAINER_ITEM_RESPONSE = 26;    //背包仓库  丢弃物品
+
+	CHAT_REQUEST = 27;                //聊天请求
+	CHAT_RESPONSE = 28;               //聊天响应
+	CHAT_NOTIFY = 29;                 //聊天通知
+	GM_REQUEST = 30;                 
+	GM_RESPONSE = 31;                
+	GM_NOTIFY = 32;                 
+
+	QUEST_LIST_REQUEST = 35;         //请求任务列表
+	QUEST_LIST_RESPONSE = 36;
+	QUEST_UPDATE_NOTIFY = 37;        //任务状态更新通知
+	QUEST_OPERATE_REQUEST = 38;      //任务操作，包括接受，完成，取消等
+	QUEST_OPERATE_RESPONSE = 39;
+
+	SKILL_SET_REQUEST = 45;          //设置技能
+	SKILL_SET_RESPONSE = 46;         
+	SKILL_LEARN_REQUEST = 47;        //学习技能
+	SKILL_LEARN_RESPONSE = 48;
+	SKILL_UPGRADE_REQUEST = 49;      //升级技能
+	SKILL_UPGRADE_RESPONSE = 50;
+
+	ENTER_INSTANCE_REQUEST = 100;     //副本
+	ENTER_INSTANCE_RESPONSE = 101;
+	LEAVE_INSTANCE_REQUEST = 102;
+	LEAVE_INSTANCE_RESPONSE = 103;
+
+	INSTANCE_RAND_DICE_REQUEST = 104;  //点击骰子
+	INSTANCE_RAND_DICE_RESPONSE = 105;  //返回随机骰子数字
+
+	INSTANCE_MOVE_REQUEST = 106;  //在副本中移动
+	INSTANCE_MOVE_RESPONSE = 107;  
+
+	INSTANCE_FIGHT_NOTIFY = 108;  
+
+	INSTANCE_STOP_REQUEST = 109;  //在副本中移动
+	INSTANCE_STOP_RESPONSE = 110;  
+
+	INSTANCE_BACKWARD_NOTIFY = 111;  //后退格子  
+	
+	MAX_MSG_ID = 512;
+}
+
+message enter_instance_req
+{
+	required uint32 instance_id = 1;
+}
+message enter_instance_resp
+{
+	required uint32 result = 1;
+	required uint32 instance_id = 2;  //进入的副本ID
+}
+message leave_instance_resp
+{
+	required uint32 scene_id = 1;   //进入的场景ID
+}
+
+message instance_backward_notify
+{
+	required uint32 back_num = 1;
+}
+
+message role_summary
+{
+	required uint32 level = 1;           //等级
+	required string name = 2;            //名字
+	required int32 hp_max = 3;                                //最大血量  可变属性
+	required int32 hp_cur = 4;                                //当前血量  可变属性
+	required uint32 strength = 5;                             //力量
+	required uint32 brain = 6;                                //智力
+	required uint32 charm = 7;                                //魅力
+	required uint32 phy_attack = 8;                           //物理攻击
+	required uint32 magic_attack = 9;                         //法术攻击
+	required uint32 phy_defence = 10;                          //物理防御
+	required uint32 magic_defence = 11;                        //法术防御
+	required uint32 parry_rate = 12;                           //招架几率
+	required uint32 counterattack_rate = 13;                   //反击几率
+	required uint32 hit_rate = 14;                             //命中几率
+	required uint32 jink_rate = 15;                            //闪避几率
+	required uint32 crit_rate = 16;                            //暴击几率
+	required uint32 speed = 17;                                //速度
+	required uint32 exp = 18;                                  //经验
+	required uint32 active_skill1 = 19;                        //配置的技能1
+	required uint32 active_skill2 = 20;                        //配置的技能2
+	required uint32 active_skill3 = 21;                        //配置的技能3
+	repeated uint32 skill = 22;                                //已经学会的技能
+}
+
+message login_req
+{
+	required uint32 role_id = 1;	
+	required uint32 area_id = 2;	
+}
+message login_resp
+{
+	required uint32 result = 1;
+	repeated role_summary role_summary = 2;   //每个人物的属性，0是主角，后面是宝宝
+	required role_sight_info info = 3;
+	required uint32 scene_id = 4;
+}
+
+message listrole_req
+{
+	required uint32 role_id = 1;	
+	required uint32 area_id = 2;	
+}
+message listrole_resp
+{
+	required uint32 role_id = 1;	
+	required uint32 area_id = 2;	
+	repeated role_summary role_summary = 3;
+}
+
+message createrole_req
+{
+	required uint32 role_id = 1;	
+	required uint32 area_id = 2;	
+	required uint32 profession = 3;
+	required string name = 4;
+}
+message createrole_resp
+{
+	required uint32 result = 1;
+	required role_summary role_summary = 2;
+	required role_sight_info info = 3;
+	required uint32 scene_id = 4;
+}
+
+//移动请求
+message move_req
+{
+	required int32 move_start_x = 1;	
+	required int32 move_start_y = 2;	
+	required int32 move_end_x = 3;	
+	required int32 move_end_y = 4;	
+}
+//移动回复
+message move_resp
+{
+	required sint32 result = 1;
+	required int32 move_start_x = 2;	
+	required int32 move_start_y = 3;
+	required int32 move_end_x = 4;	
+	required int32 move_end_y = 5;	
+}
+//移动通知
+message move_notify
+{
+	required uint32 role_id = 1;
+	required uint32 area_id = 2;	
+	required int32 move_start_x = 3;	
+	required int32 move_start_y = 4;
+	required int32 move_end_x = 5;	
+	required int32 move_end_y = 6;	
+}
+
+//跳转请求
+message transport_req
+{
+	required uint32 target_scene_id = 1;
+}
+//跳转回复
+message transport_resp
+{
+	required sint32 result = 1;
+	required uint32 scene_id = 2;
+	required int32 pos_x = 3;	
+	required int32 pos_y = 4;
+}
+
+message role_sight_info
+{
+	required uint32 role_id = 1;
+	required uint32 area_id = 2;	
+	required string name = 3;
+	required uint32 level = 4;           //等级
+	required uint32 profession = 5;      //职业
+	required int32 move_start_x = 6;	
+	required int32 move_start_y = 7;
+	required int32 move_end_x = 8;	
+	required int32 move_end_y = 9;	
+	required uint32 move_speed = 10;     //移动速度	
+}
+
+//视野刷新
+message refresh_sight_notify
+{
+	repeated role_sight_info add_role = 1;
+	repeated uint32 leave_role_id = 2;
+	repeated uint32 leave_role_area = 3;
+} 
+
+message logout_notify
+{
+	required uint32 role_id = 1;
+	required uint32 area_id = 2;	
+}
+
+message kick_notify
+{
+	required uint32 reason = 1;  //被踢下线原因
+}
+
+enum CONTAINER_TYPE
+{
+	BAG = 1;         //背包
+	STORE = 2;       //仓库
+	EQUIP = 3;       //装备
+}
+
+message container_thing
+{
+	required uint32 thing_pos = 1;   //位置
+	required uint32 thing_id = 2;    //物品ID
+	required uint32 thing_num = 3;   //物品数量
+}
+
+message list_container_item_request      //请求容器内的物品列表
+{
+	required uint32 container_type = 1;  //容器类型
+}
+
+message list_container_item_response
+{
+	required uint32 result = 1;   //结果
+	required uint32 container_type = 2;  //容器类型
+	repeated container_thing things = 3;
+	required uint32 max_thing_num = 4;  //最大可用格子数
+}
+
+message drop_container_item_request   //drop物品
+{
+	required uint32 container_type = 1;  //容器类型
+	required uint32 thing_pos = 2;   //位置
+	required uint32 thing_num = 3;   
+}
+
+message drop_container_item_response   //drop物品
+{
+	required uint32 result = 1;   //结果
+	required uint32 container_type = 2;  //容器类型
+	required uint32 thing_pos = 3;   //位置
+	required uint32 thing_num = 4;   
+}
+
+message swap_container_item_request   //交换物品位置
+{
+	required uint32 container_type = 1;  //容器类型
+	required uint32 thing_pos1 = 2;   //位置1
+	required uint32 thing_pos2 = 3;   //位置2
+}
+
+message swap_container_item_response   //交换物品位置
+{
+	required uint32 result = 1;   //结果
+	required uint32 container_type = 2;  //容器类型
+	required uint32 thing_pos1 = 3;   //位置1
+	required uint32 thing_pos2 = 4;   //位置2
+}
+
+message operate_container_item_request    //操作物品，包括使用和丢弃
+{
+	required uint32 container_type = 1;  //容器类型
+	required uint32 thing_pos = 2;   //位置
+	required uint32 thing_id = 3;    //物品ID
+	required uint32 thing_num = 4;   //物品数量
+}
+
+message container_changed_notify
+{
+	required uint32 container_type = 1;  //容器类型
+	repeated container_thing add_thing = 2;  //增加的物品
+	repeated container_thing del_thing = 3;  //减少的物品
+}
+
+message rival_data
+{
+	required string name = 1;        //名字
+	required uint32 res_id = 2;      //资源ID
+	required uint32 hp = 3;          //血量
+	repeated uint32 buff = 4;        //buff
+}
+
+message round_data
+{
+	required bool left = 1;  //左边释放技能
+	required uint32 skill_id = 2; //技能ID
+	required bool is_jink = 3;    //是否闪避
+	required bool is_parry = 4;   //是否招架
+	required bool is_crit = 5;    //是否暴击
+	repeated uint32 lattr_id = 6;  //左边变化的属性ID
+	repeated int32 lattr_value = 7;  //左边变化的属性value
+	repeated uint32 rattr_id = 8;  //右边变化的属性ID
+	repeated int32 rattr_value = 9;  //右边变化的属性value
+	repeated uint32 lbuff_add = 10;        //左边打上的buff	
+	repeated uint32 lbuff_del = 11;        //左边删除的buff	
+	repeated uint32 lbuff_effect_attr_id = 12;  //左边buff引起变化的属性ID
+	repeated int32 lbuff_effect_attr_value = 13;  //左边buff引起变化的属性value
+	repeated uint32 rbuff_effect_attr_id = 14;  //右边buff引起变化的属性ID
+	repeated int32 rbuff_effect_attr_value = 15;  //右边buff引起变化的属性value
+	repeated uint32 rbuff_add = 16;        //右边打上的buff	
+	repeated uint32 rbuff_del = 17;        //右边删除的buff	
+	required bool is_counterattack = 18;   //是否反击
+	required uint32 counterattack_hp_delta = 19; //反击造成的血量变化
+}
+
+enum ATTR_ID
+{
+	HP = 1;
+}
+
+enum CS_FIGHT_RESULT
+{
+	LEFT_WIN = 0;
+	RIGHT_WIN = 1;
+}
+
+message fight_notify
+{
+	required rival_data rival_data_left = 1;   //左边选手信息
+	required rival_data rival_data_right = 2;   //右边选手信息
+	required int32 result = 3;            //战斗结果
+	repeated round_data round_data = 4;   //回合数据
+}
+
+message instance_rand_dice_response
+{
+	required uint32 num = 1;
+}
+
+message instance_move_request
+{
+	repeated uint32 id = 1;
+}
+
+message instance_move_response
+{
+	required uint32 result = 1;
+	repeated uint32 id = 2;
+}
+
+message instance_stop_response
+{
+	required uint32 result = 1;
+}
+
+message gm_request
+{
+	required string command = 1;
+}
+
+message gm_response
+{
+	required uint32 result = 1;
+}
+
+message gm_notify
+{
+	required uint32 type = 1;
+	required string msg = 2;
+}
+
+message chat_request
+{
+	required uint32 channel = 1; //聊天类型
+	required uint32 target_role_id = 2;  //悄悄话对象，如果有
+	required uint32 target_area_id = 3;  //悄悄话对象，如果有
+	required string msg = 4;
+	required string pic_index = 5;
+	required string pic_name = 6;
+}
+
+message chat_response
+{
+	required uint32 result = 1;
+	required uint32 channel = 2; //聊天类型
+	required uint32 target_role_id = 3;  //悄悄话对象，如果有
+	required uint32 target_area_id = 4;  //悄悄话对象，如果有
+	required string target_name = 5;  //悄悄话对象，如果有
+	required string msg = 6;
+	required string pic_index = 7;
+	required string pic_name = 8;
+}
+
+message chat_notify
+{
+	required uint32 channel = 1; //聊天类型
+	required uint32 src_role_id = 2;  //发送人
+	required uint32 src_area_id = 3;  //发送人
+	required string src_name = 4;     //发送人
+	required uint32 dst_role_id = 5;  //悄悄话对象，如果有
+	required uint32 dst_area_id = 6;  //悄悄话对象，如果有
+	required string dst_name = 7;     //悄悄话对象，如果有
+	required string msg = 8;
+	required string pic_index = 9;
+	required string pic_name = 10;
+}
+
+enum QUEST_OPERATOR
+{
+	ACCEPT = 1;     //领取
+	CANCEL = 2;     //放弃
+	COMPLETE = 3;   //完成
+}
+
+message quest_operate_request
+{
+	required uint32 id = 1;
+	required uint32 operator = 2;	
+}
+
+message quest_operate_response
+{
+	required uint32 result = 1;
+	required uint32 id = 2;
+	required uint32 operator = 3;	
+}
+
+enum QUEST_STATE
+{
+	IN_PROGRESS = 1;   //未完成
+	FINISHED = 2;      //已完成
+}
+
+message quest_progress
+{
+	required uint32 id = 1;               
+	required uint32 state = 2;           //状态
+	required uint32 accept_time = 3;     //任务领取时间
+	required uint32 cycle_num = 4;       //循环次数
+	required uint32 kill_npc1_num = 5;   //击杀Npc1数量
+	required uint32 kill_npc2_num = 6;
+	required uint32 kill_npc3_num = 7;
+	required uint32 collect_item1_num = 8;  //收集道具1数量
+	required uint32 collect_item2_num = 9;
+	required uint32 collect_item3_num = 10;
+}
+
+message quest_progress_list_response
+{
+	repeated quest_progress quest = 1;             //所有的已接任务的信息
+	required uint32 main_quest_index = 2;          //最近已经完成的主线任务id
+	repeated uint32 all_finished_slave_quest = 3;  //所有已经完成的支线任务的ID
+}
+
+message quest_update_notify
+{
+	required quest_progress progress = 1;
+}
+
+message skill_set_request
+{
+	required uint32 role_pos = 1;   //第N个角色，0是主角，后面是宝宝
+	required uint32 id = 2;        //技能ID，如果是要取消，则设置成0
+	required uint32 pos = 3;      //放置的技能的位置,从0开始
+}
+
+message skill_set_response
+{
+	required uint32 result = 1;
+	required uint32 id = 2;        //技能ID，如果是要取消，则设置成0
+	required uint32 pos = 3;      //放置的技能的位置,从0开始
+}
+

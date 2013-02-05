@@ -1,0 +1,15 @@
+20120523 01:07:12.484 ERROR    six13log.log.app.application1- load_all_scene: load scene config[0] fail
+20120523 01:07:12.485 INFO     six13log.log.app.application1- game_srv run
+20120523 01:07:15.509 ERROR    six13log.log.app.application1- handle_logout_request: find role [14] failed
+20120523 01:07:18.387 DEBUG    six13log.log.app.application1- add_one_role: [14] [12]
+20120523 01:07:18.387 DEBUG    six13log.log.app.application1- send_one_msg 14: send msg[1003] len[12], ret [12]
+20120523 01:07:18.388 DEBUG    six13log.log.app.application1- send_one_msg 13: send msg[3] len[38], ret [38]
+20120523 01:07:18.388 DEBUG    six13log.log.app.application1- set_role_bag: set role bag [14] [12]
+20120523 01:07:18.388 DEBUG    six13log.log.app.application1- set_role_scene: set role scene [14] [12] 1
+20120523 01:07:18.388 ERROR    six13log.log.app.application1- reset_role_attribute: fail roleid = [2][1] prof[1] level[3235703312]
+20120523 01:07:18.388 DEBUG    six13log.log.app.application1- set_role_scene: set role scene [14] [12] 1
+20120523 01:07:18.388 DEBUG    six13log.log.app.application1- add_role_to_scene: add role  [14] [12] to scene 1
+20120523 01:07:18.388 INFO     six13log.log.app.application1- role_login: role [14] [12] login success
+20120523 01:07:25.665 DEBUG    six13log.log.app.application1- del_one_role: [14] [12]
+20120523 01:07:25.665 DEBUG    six13log.log.app.application1- del_role_from_scene: del role  [14] [12] from scene 1
+20120523 01:07:25.665 INFO     six13log.log.app.application1- role_logout: role [14] [12] logout success

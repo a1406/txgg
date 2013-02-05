@@ -1,0 +1,37 @@
+20120523 01:05:12.215 INFO     six13log.log.app.application1- conn_srv run
+20120523 01:05:14.245 DEBUG    six13log.log.app.application1- cb_timer: fd = -1, events = 1, arg = 0x40a46ed0
+20120523 01:05:16.245 DEBUG    six13log.log.app.application1- cb_timer: fd = -1, events = 1, arg = 0x40a46f60
+20120523 01:05:17.244 DEBUG    six13log.log.app.application1- cb_timer: fd = -1, events = 1, arg = (nil)
+20120523 01:05:53.572 DEBUG    six13log.log.app.application1- cb_listen: fd = 12, events = 2, arg = 0x64d800
+20120523 01:06:18.977 ERROR    six13log.log.app.application1- conn_cb_client_recv: do not have game server connected
+20120523 01:07:12.495 DEBUG    six13log.log.app.application1- cb_listen: fd = 13, events = 2, arg = 0x64d760
+20120523 01:07:12.496 INFO     six13log.log.app.application1- conn_cb_server_listen_after: server connected from fd 15
+20120523 01:07:15.509 INFO     six13log.log.app.application1- conn_cb_client_recv: connect closed from fd 14
+20120523 01:07:15.509 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[4] len[10], ret [10]
+20120523 01:07:15.509 DEBUG    six13log.log.app.application1- remove_listen_callback_event: close connect from fd 14
+20120523 01:07:15.509 DEBUG    six13log.log.app.application1- release_client_client_map: del_client_map [14] success
+20120523 01:07:18.384 DEBUG    six13log.log.app.application1- cb_listen: fd = 12, events = 2, arg = 0x64d800
+20120523 01:07:18.387 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[2] len[10], ret [10]
+20120523 01:07:18.388 DEBUG    six13log.log.app.application1- send_one_msg 14: send msg[3] len[36], ret [36]
+20120523 01:07:20.784 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:20.824 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:20.966 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:21.383 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:21.383 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:21.515 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:21.805 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:21.805 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:22.167 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:22.293 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:22.294 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:22.849 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:23.693 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:23.694 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:24.033 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:24.293 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:24.294 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:24.700 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[8] len[18], ret [18]
+20120523 01:07:25.665 INFO     six13log.log.app.application1- conn_cb_client_recv: connect closed from fd 14
+20120523 01:07:25.665 DEBUG    six13log.log.app.application1- send_one_msg 15: send msg[4] len[10], ret [10]
+20120523 01:07:25.665 DEBUG    six13log.log.app.application1- remove_listen_callback_event: close connect from fd 14
+20120523 01:07:25.665 DEBUG    six13log.log.app.application1- release_client_client_map: del_client_map [14] success

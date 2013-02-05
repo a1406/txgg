@@ -1,0 +1,138 @@
+enum TYPES
+{
+	INT_TYPE = 1;
+	CHAR_TYPE = 2;
+	STRING_TYPE = 3;
+	FLOAT_TYPE = 4;
+	STRUCT_TYPE = 5;
+}
+
+   message AMessage
+   {
+      required TYPES a=1; 
+      required string b = 2;
+      repeated int32 c=3;
+      repeated string d=4;
+   }
+
+message ttt
+{
+    required int32 a = 1;
+    required int32 b = 2;
+    required int32 c = 4;
+}
+
+message BMessage
+{
+    repeated ttt msg = 4;
+}
+
+message role_summary
+{
+	required uint32 seq = 1;
+	required uint32 profession = 2;
+	required uint32 level = 3;
+	required string name = 4;
+}
+
+message role_pos
+{
+	required uint32 pos_x = 1;	
+	required uint32 pos_y = 2;	
+}
+
+message login_req
+{
+	required uint32 role_id = 1;	
+}
+message login_resp
+{
+	required uint32 role_id = 1;	
+	required role_summary role_summary = 2;
+	required uint32 scene_id = 3;	
+	required role_pos role_pos = 4;
+}
+
+message listrole_req
+{
+	required uint32 role_id = 1;	
+}
+message listrole_resp
+{
+	required uint32 role_id = 1;	
+	repeated role_summary role_summary = 2;
+}
+
+message createrole_req
+{
+	required uint32 role_id = 1;	
+	required uint32 profession = 2;
+	required string name = 3;
+}
+message createrole_resp
+{
+	required uint32 role_id = 1;	
+	required role_summary role_summary = 2;
+}
+
+message move_req
+{
+	repeated role_pos path = 1;	
+}
+message move_resp
+{
+	required sint32 result = 1;
+	repeated role_pos path = 2;
+}
+message move_notify
+{
+	required uint32 role_id = 1;
+	repeated role_pos path = 2;	
+}
+
+message transport_req
+{
+	required uint32 target_scene_id = 1;
+}
+message transport_resp
+{
+	required sint32 result = 1;
+}
+message leave_scene_notify
+{
+	required uint32 role_id = 1;
+}
+message join_scene_notify
+{
+	required uint32 role_id = 1;
+}
+
+message logout_notify
+{
+	required uint32 role_id = 1;
+}
+
+message rival_data
+{
+	required string name = 1;        //名字
+	required uint32 res_id = 2;      //资源ID
+	required uint32 hp = 3;          //血量
+	repeated uint32 buff = 4;        //buff
+}
+
+message round_data
+{
+	required bool left = 1;  //左边释放技能
+	required uint32 lhp_delta = 2;    //左边血量变化
+	required uint32 rhp_delta = 3;    //右边血量变化
+	repeated uint32 lbuff = 4;        //左边打上的buff
+	repeated uint32 rbuff = 5;        //右边打上的buff
+}
+
+message fight_notify
+{
+	required rival_data rival_data = 1;   //对手信息
+	required int32 result = 2;            //战斗结果
+	repeated round_data round_data = 3;   //回合数据
+}
+

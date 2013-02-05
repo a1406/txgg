@@ -1,0 +1,8 @@
+//package com.koala.data.proto;
+
+enum CS_ERROR_NO
+{
+	ERR_SUCCESS = 0;                          //成功
+	ERR_LOGIN_ROLE_NOT_EXIST = 1;             //没有角色
+	ERR_CREATEROLE_NAME_EXIST = 2;            //名字重复
+}

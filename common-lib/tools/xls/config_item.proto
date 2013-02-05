@@ -1,0 +1,63 @@
+/*
+message CFG_ITEM
+{
+	required int32 id = 1; 
+	required string name = 3; 
+	required int32 level = 4; 	
+	required int32 type = 2; 
+	required int32 sub_type = 2; 
+
+required int32 trade_enable;
+required int32 sell_enable;
+required int32 drop_enable;
+	required int32 icon = 6; 	
+	required string desc = 5; 	
+
+	required int32 action = 7; 	
+	required int32 effect = 8; 	
+	required int32 music = 9; 	
+	required int32 consume = 10; 	
+	required int32 learn_level = 11; 	
+	required int32 learn_npc = 12; 	
+	required int32 learn_friendly = 13; 	
+	required int32 learn_item_id = 14; 	
+	required int32 learn_item_num = 15; 	
+	required int32 learn_money = 16; 	
+	required int32 next_level = 17; 	
+	required int32 next_friendly = 18; 	
+	required int32 next_item_id = 19; 	
+	required int32 next_item_num = 20; 	
+	required int32 next_money = 21; 	
+	required int32 continue_time = 22; 	
+	required int32 script = 23; 	
+	required int32 hp_max = 24; 	
+	required int32 hp_max_percent = 25; 	
+	required int32 hp_cur = 26; 	
+	required int32 hp_cur_percent = 27; 	
+	required int32 phy_attack_percent = 28; 	
+	required int32 phy_attack = 29; 	
+	required int32 magic_attack_percent = 30; 	
+	required int32 magic_attack = 31; 	
+	required int32 phy_defence_percent = 32; 	
+	required int32 phy_defence = 33; 	
+	required int32 magic_defence_percent = 34; 	
+	required int32 magic_defence = 35; 	
+	required int32 charm = 36; 	
+	required int32 hit_rate = 37; 	
+	required int32 jink_rate = 38; 	
+	required int32 hit_rate_percent = 39; 	
+	required int32 countattack_rate = 40; 	
+	required int32 countattack_rate_percent = 41; 	
+	required int32 parry_rate = 42; 	
+	required int32 parry_rate_percent = 43; 	
+	required int32 crit_rate = 44; 	
+	required int32 crit_rate_percent = 45; 	
+	required int32 speed_rate = 46; 	
+	required int32 speed_percent = 47; 	
+}
+
+message CFG_ITEMS
+{
+	repeated CFG_ITEM item = 1;
+}
+*/

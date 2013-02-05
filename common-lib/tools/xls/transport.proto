@@ -1,0 +1,17 @@
+message TRANSPORT
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	required int32 src_scene_id = 3;
+	required int32 src_pos_x = 4;
+	required int32 src_pos_y = 5;
+	required int32 dst_scene_id = 6;
+	required int32 dst_pos_x = 7;
+	required int32 dst_pos_y = 8;
+
+}
+
+message TRANSPORTS
+{
+	repeated TRANSPORT transport = 1;
+}
