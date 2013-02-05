@@ -1,0 +1,54 @@
+//package com.koala.data.cfg;
+
+message CFG_BRANCH_QUEST
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	required int32 pre_id = 3;
+	required int32 type = 4;
+	required int32 npc = 5;
+	required int32 level = 6;
+	required int32 friendly = 7;
+	required int32 time = 8;
+	required int32 camp = 9;
+	required int32 prof = 10;
+	required int32 sex = 11;
+	required int32 item = 12;
+	required int32 item_num = 13;
+	required string msg = 14;
+	required string button = 15;
+	required string desc = 16;
+	required int32 map = 17;
+	required int32 finish_npc = 18;
+	required int32 finish_level = 19;
+	required int32 finish_friend = 20;
+	required int32 finish_time= 21;
+	required int32 kill_npc1 = 22;
+	required int32 kill_npc1_num = 23;
+	required int32 kill_npc2 = 24;
+	required int32 kill_npc2_num = 25;
+	required int32 kill_npc3 = 26;
+	required int32 kill_npc3_num = 27;
+	required int32 collect_item1 = 28;
+	required int32 collect_item1_num = 29;
+	required int32 collect_item2 = 30;
+	required int32 collect_item2_num = 31;
+	required int32 collect_item3 = 32;
+	required int32 collect_item3_num = 33;
+	required int32 award_item = 34;
+	required int32 award_item_num = 35;
+	required int32 award_exp = 36; 
+	required int32 award_money = 37;
+	required int32 award_friendly = 38;
+	required int32 script = 39;
+	required string unfinish_msg = 40;
+	required string unfinish_button = 41;
+	required string finish_msg = 42;
+	required string finish_button = 43;
+	
+}
+
+message CFG_BRANCH_QUESTS
+{
+	repeated CFG_BRANCH_QUEST quest = 1;
+}

@@ -1,0 +1,9 @@
+//package com.koala.data.proto;
+
+enum CS_ERROR_NO
+{
+	ERR_SUCCESS = 0;                          //成功
+	ERR_INSTANCE_ENTERFIGHT = 1;              //副本中进入战斗
+	ERR_LOGIN_ROLE_NOT_EXIST = 2;             //没有角色
+	ERR_CREATEROLE_NAME_EXIST = 3;            //名字重复
+}

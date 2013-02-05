@@ -1,0 +1,14 @@
+//package com.koala.data.cfg;
+
+message CFG_INSTANCE
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	required int32 res_id = 3;
+	repeated int32 dropthing_id = 4;
+}
+
+message CFG_INSTANCES
+{
+	repeated CFG_INSTANCE instance = 1;
+}

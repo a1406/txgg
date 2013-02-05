@@ -1,0 +1,33 @@
+//package com.koala.data.cfg;
+
+message CFG_MAP_FUNCTION
+{
+	required int32 id = 1; 
+	required int32 monster1 = 2; 
+	required int32 monster2 = 3; 
+	required int32 monster3 = 4; 
+	required int32 hp = 5; 
+	required int32 move = 6; 
+	repeated int32 drop = 7; 
+	required int32 bless = 8; 
+	required int32 bless_percent = 9; 
+	required int32 curse = 10; 
+	required int32 curse_percent = 11; 
+	required int32 shop = 12; 
+	required int32 shop_percent = 13; 
+	required int32 gold = 14; 
+	required int32 gold_percent = 15; 
+	required int32 elite = 16; 
+	required int32 elite_percent = 17; 
+	required int32 drop_delta = 18; 
+	required int32 drop_delta_percent = 19; 
+	required int32 money_delta = 20; 
+	required int32 money_delta_percent = 21; 
+	required int32 exp_delta = 22; 
+	required int32 exp_delta_percent = 23; 
+}
+
+message CFG_MAP_FUNCTIONS
+{
+	repeated CFG_MAP_FUNCTION map_function = 1;
+}

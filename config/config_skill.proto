@@ -1,0 +1,29 @@
+//package com.koala.data.cfg;
+
+message CFG_SKILL
+{
+	required int32 id = 1; 
+	required int32 type = 2; 
+	required string name = 3; 
+	required int32 level = 4; 	
+	required int32 max_level = 5; 	
+	required string desc = 6; 	
+	required int32 icon = 7; 	
+	required int32 action = 8; 	
+	required int32 effect = 9; 	
+	required int32 music = 10; 	
+	required int32 consume = 11; 	
+	required int32 learn_level = 12; 	
+	required int32 learn_npc = 13; 	
+	required int32 learn_friendly = 14; 	
+	required int32 learn_item_id = 15; 	
+	required int32 learn_item_num = 16; 	
+	required int32 learn_money = 17; 	
+	required int32 script = 18; 	
+	required int32 attribute = 19; 	
+}
+
+message CFG_SKILLS
+{
+	repeated CFG_SKILL skill = 1;
+}

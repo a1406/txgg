@@ -1,0 +1,33 @@
+//package com.koala.data.cfg;
+
+
+
+message CFG_ITEM
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	required int32 level = 3; 	
+	required int32 type = 4; 
+	required int32 trade_able = 6;
+	required int32 sell_able = 7;
+	required int32 drop_able = 8;
+	required int32 icon = 9; 	
+	required string desc = 10; 	
+	required int32 level_limit = 11; 	
+	required int32 prof_limit = 12; 	
+	required int32 sex_limit = 13; 	
+	required int32 buy_price = 14; 	
+	required int32 sell_price = 15; 	
+	required int32 energy_price = 16; 	
+	required int32 stack_able = 17; 	
+	required int32 script_able = 18; 	
+	required int32 attr_id = 19; 	
+	required int32 strong_id = 20; 	
+	required int32 merge_id = 21; 	
+
+}
+
+message CFG_ITEMS
+{
+	repeated CFG_ITEM item = 1;
+}

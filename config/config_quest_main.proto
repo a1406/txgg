@@ -1,0 +1,54 @@
+//package com.koala.data.cfg;
+
+message CFG_MAIN_QUEST
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	required int32 type = 3;
+	required int32 npc = 4;
+	required int32 level = 5;
+	required string msg1 = 6;
+	required string button1 = 7;
+	required string msg2 = 8;
+	required string button2 = 9;
+	required string msg3 = 10;
+	required string button3 = 11;
+	required string msg4 = 12;
+	required string button4 = 13;
+	required string desc = 14;
+	required int32 map = 15;
+	required int32 finish_npc = 16;
+	required int32 finish_level = 17;
+	required int32 kill_npc = 18;
+	required int32 collect_item = 19;
+	required int32 award_item1 = 20;
+	required int32 award_item1_num = 21;
+	required int32 award_item2 = 22;
+	required int32 award_item2_num = 23;
+	required int32 award_exp = 24;
+	required int32 award_money = 25;
+	required int32 award_friendly = 26;
+	required int32 script = 27;
+	required int32 animation = 28;
+	required int32 trig_msg = 29;
+	required string cond_msg1 = 30;
+	required string cond_button1 = 31;
+	required string cond_msg2 = 32;
+	required string cond_button2 = 33;
+	required string cond_msg3 = 34;
+	required string cond_button3 = 35;
+	required string finish_msg1 = 36;
+	required string finish_button1 = 37;
+	required string finish_msg2 = 38;
+	required string finish_button2 = 39;
+	required string finish_msg3 = 40;
+	required string finish_button3 = 41;
+
+	required string inprog_msg = 42;
+	required string inprog_button = 43;
+}
+
+message CFG_MAIN_QUESTS
+{
+	repeated CFG_MAIN_QUEST quest = 1;
+}

@@ -1,0 +1,13 @@
+message CFG_PLAYER
+{
+	required int32 prof = 1; 
+	required int32 level = 2; 
+	required int32 sex = 3; 
+	required int32 exp = 4;
+	required int32 attribute = 5;
+}
+
+message CFG_PLAYERS
+{
+	repeated CFG_PLAYER player = 1;
+}

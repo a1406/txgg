@@ -1,0 +1,13 @@
+//package com.koala.data.cfg;
+
+message CFG_KEYWORD
+{
+	required string group = 1;
+	required int32 value = 2;
+	required string desc = 3;
+}
+
+message CFG_KEYWORDS
+{
+	repeated CFG_KEYWORD keyword = 1;
+}

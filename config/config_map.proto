@@ -1,0 +1,23 @@
+//package com.koala.data.cfg;
+
+message CFG_MAP
+{
+	required int32 id = 1;
+	required string name = 2; 
+	required int32 level = 3; 
+	required int32 num = 4; 
+	required int32 profession = 5;
+	required int32 open_time = 6;
+	required int32 allowed_alliance = 7;
+	required int32 scene_id = 8;
+	required int32 boss1 = 9;
+	required int32 boss2 = 10;
+	required int32 boss3 = 12;
+	required int32 award = 13;
+	required int32 flash_id = 14;
+}
+
+message CFG_MAPS
+{
+	repeated CFG_MAP MAP = 1;
+}

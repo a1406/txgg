@@ -1,0 +1,47 @@
+//package com.koala.data.cfg;
+
+message CFG_ATTRIBUTE
+{
+	required int32 id = 1; 
+	required int32 hp = 2; 	
+	required int32 hp_percent = 3; 	
+	required int32 strength = 4; 	
+	required int32 brain = 5; 	
+	required int32 charm = 6; 	
+	required int32 agile = 7; 	
+	required int32 phy_attack = 8; 	
+	required int32 phy_attack_percent = 9; 	
+	required int32 magic_attack = 10; 	
+	required int32 magic_attack_percent = 11; 	
+	required int32 phy_defence = 12; 	
+	required int32 phy_defence_percent = 13; 	
+	required int32 magic_defence = 14; 	
+	required int32 magic_defence_percent = 15; 	
+	required int32 hit_rate = 16; 	
+	required int32 hit_rate_percent = 17; 	
+	required int32 jink_rate = 18; 	
+	required int32 jink_rate_percent = 19; 	
+	required int32 parry_rate = 20; 	
+	required int32 parry_rate_percent = 21; 	
+	required int32 countattack_rate = 22; 	
+	required int32 countattack_rate_percent = 23; 	
+	required int32 crit_rate = 24; 	
+	required int32 crit_rate_percent = 25; 	
+	required int32 speed = 26; 	
+	required int32 speed_percent = 27; 	
+	required int32 move_speed = 28; 	
+	required int32 move_speed_percent = 29; 	
+	required int32 fight_hit_percent = 30; 	
+	required int32 fight_parry_percent = 31; 	
+	required int32 fight_countattack_percent = 32; 	
+	required int32 fight_crit_percent = 33; 	
+	required int32 restore_hp = 34; 	
+	required int32 restore_hp_percent = 35; 	
+	required int32 restore_magic = 36; 	
+	required int32 restore_magic_percent = 37; 	
+}
+
+message CFG_ATTRIBUTES
+{
+	repeated CFG_ATTRIBUTE attribute = 1;
+}

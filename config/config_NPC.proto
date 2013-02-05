@@ -1,0 +1,26 @@
+//package com.koala.data.cfg;
+
+message CFG_NPC
+{
+	required uint32 id = 1; 
+	required string name = 2; 
+	required uint32 level = 3; 
+	required uint32 icon = 4; 
+	required uint32 style = 5; 
+	required uint32 type = 6; 
+	repeated uint32 func = 7;
+	required string msg = 8;
+	required string music = 9; 
+	required uint32 attr = 10;
+	required uint32 skill1 = 11;
+	required uint32 skill2 = 12;
+	required uint32 skill3 = 13;
+	required uint32 ai = 14;
+	repeated uint32 drop = 15;
+	required uint32 script = 16;
+}
+
+message CFG_NPCS
+{
+	repeated CFG_NPC npc = 1;
+}

@@ -1,0 +1,21 @@
+//package com.koala.data.cfg;
+
+message CFG_INSTANCE_MAP_NODE
+{
+	required int32 id = 1;      //(x << 16) | y
+	required int32 action = 2;
+//	required int32 last_id = 5;
+//	required int32 next_id1 = 6;
+//	required int32 next_id2 = 7;
+//	required int32 next_id3 = 8;
+	required int32 up_pos = 3;
+	required int32 left_pos = 4;
+	required int32 down_pos = 5;
+	required int32 right_pos = 6;
+	required int32 seq_id = 7;
+}
+
+message CFG_INSTANCE_MAP
+{
+	repeated CFG_INSTANCE_MAP_NODE node = 1;
+}

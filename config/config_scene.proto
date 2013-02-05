@@ -1,0 +1,26 @@
+//package com.koala.data.cfg;
+
+message npc_info
+{
+	required int32 id = 1;
+	required int32 pos_x = 2;
+	required int32 pos_y = 3;
+}
+
+message CFG_SCENE
+{
+	required int32 id = 1; 
+	required string name = 2; 
+	required int32 width = 3;
+	required int32 height = 4;
+	required int32 enter_pos_x = 5;
+	required int32 enter_pos_y = 6;
+	required int32 valid_height = 7;
+	repeated npc_info npc_info = 8;
+	repeated int32 instance_id = 9;
+}
+
+message CFG_SCENES
+{
+	repeated CFG_SCENE scene = 1;
+}

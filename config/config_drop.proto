@@ -1,0 +1,24 @@
+//package com.koala.data.cfg;
+
+message drop_item
+{
+	required int32 id = 1;
+	required int32 num = 2;
+	required int32 rate = 3;
+}
+
+message CFG_DROP
+{
+	required int32 id = 1; 
+	required int32 exp = 2; 
+	required int32 money = 3;
+	required int32 gold = 4;
+	required int32 gold_rate = 5;
+	required int32 exclude = 6;
+	repeated drop_item item = 7;
+}
+
+message CFG_DROPS
+{
+	repeated CFG_DROP drop = 1;
+}
