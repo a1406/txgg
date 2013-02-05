@@ -1,0 +1,10 @@
+1: 恢复模式需要每个类型的对象都提供初始化和恢复模式的函数并调用。现在scene对象已经有了，但是没有调用
+2: game_srv的unpack换成tobuf
+3: db_srv, game_srv增加自动重连的机制。
+4: 获取配置，通过ID做下标获取
+5: 协议解析, 通过协议ID做下标
+6: keyword表格
+7: conn_srv and db_srv resend to game_srv
+8: 装备，buff，任务
+9: 重复号登陆的踢人流程
+

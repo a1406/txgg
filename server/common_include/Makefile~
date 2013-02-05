@@ -1,0 +1,3 @@
+all: db_bag.proto
+	../server/bin/protoc-c  --c_out=. cs.proto
+	gcc -c -O0 -Wall -Werror -DDEBUG cs.pb-c.c -g -O0 -Wall -Werror -DDEBUG -I../../protobuf-c/src/ -I../server/other_include/

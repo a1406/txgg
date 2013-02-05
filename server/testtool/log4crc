@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE log4c SYSTEM "">
+
+<log4c version="1.2.1">
+
+	<config>
+		<bufsize>0</bufsize>
+		<debug level="2"/>
+		<nocleanup>0</nocleanup>
+		<reread>1</reread>
+	</config>
+
+	<category name="root" priority="trace"/>
+	<category name="test.log" priority="trace" appender="myrollingfileappender" />
+	<!category name="test.log" priority="trace" appender="stdout" />
+	<!category name="test.log" priority="notice" appender="stdout" />
+	<rollingpolicy name="myrollingpolicy" type="sizewin" maxsize="10240" maxnum="10" />
+
+	<appender name="myrollingfileappender" type="rollingfile" logdir="./logs" prefix="alog" layout="dated" rollingpolicy="myrollingpolicy" />
+	
+	<appender name="stdout" type="stream" layout="dated"/>
+	<appender name="stderr" type="stream" layout="dated"/>
+	<appender name="syslog" type="syslog" layout="basic"/>
+
+	<layout name="basic" type="basic"/>
+	<layout name="dated" type="dated"/>
+	
+
+</log4c>

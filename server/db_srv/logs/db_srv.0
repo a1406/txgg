@@ -1,0 +1,20 @@
+20120701 04:34:13.782 INFO     six13log.log.app.application1- db_srv run
+20120701 04:34:16.820 DEBUG    six13log.log.app.application1- cb_listen: fd = 10, events = 2, arg = 0x1056c80
+20120701 04:34:16.820 INFO     six13log.log.app.application1- dbsrv_cb_server_listen_after: server connected from fd 11
+20120701 04:34:56.982 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1003] len[12], max_len [12]
+20120701 04:34:56.982 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1004] len[174], ret [174]
+20120701 04:34:56.982 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1003] len[12], reset_len [0]
+20120701 04:35:06.029 ERROR    six13log.log.app.application1- dbsrv_cb_server_recv: connect closed from fd 11
+20120701 04:35:06.029 DEBUG    six13log.log.app.application1- remove_listen_callback_event: close connect from fd 11
+20120701 04:35:06.029 DEBUG    six13log.log.app.application1- roledb_release_client_map: del_client_map [11] success
+20120701 04:35:06.053 DEBUG    six13log.log.app.application1- cb_listen: fd = 10, events = 2, arg = 0x1056c80
+20120701 04:35:06.053 INFO     six13log.log.app.application1- dbsrv_cb_server_listen_after: server connected from fd 11
+20120701 04:35:18.809 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1008] len[166], max_len [166]
+20120701 04:35:18.854 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1009] len[20], ret [20]
+20120701 04:35:18.854 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1008] len[166], reset_len [0]
+20120701 04:35:20.533 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1003] len[12], max_len [12]
+20120701 04:35:20.534 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1004] len[174], ret [174]
+20120701 04:35:20.534 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1003] len[12], reset_len [0]
+20120701 04:54:02.286 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1008] len[166], max_len [166]
+20120701 04:54:02.326 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1009] len[20], ret [20]
+20120701 04:54:02.326 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1008] len[166], reset_len [0]

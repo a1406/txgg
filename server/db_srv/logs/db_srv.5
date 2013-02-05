@@ -1,0 +1,19 @@
+20120627 02:14:18.082 INFO     six13log.log.app.application1- db_srv run
+20120627 02:14:21.112 DEBUG    six13log.log.app.application1- cb_listen: fd = 10, events = 2, arg = 0x1052a60
+20120627 02:14:21.112 INFO     six13log.log.app.application1- dbsrv_cb_server_listen_after: server connected from fd 11
+20120627 02:15:07.971 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1003] len[12], max_len [12]
+20120627 02:15:07.971 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1004] len[151], ret [151]
+20120627 02:15:07.971 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1003] len[12], reset_len [0]
+20120627 02:16:32.895 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1003] len[12], max_len [12]
+20120627 02:16:32.896 INFO     six13log.log.app.application1- fetch_role_handle: can not fetch role 1201
+
+20120627 02:16:32.896 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1004] len[76], ret [76]
+20120627 02:16:32.896 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1003] len[12], reset_len [0]
+20120627 02:22:02.673 TRACE    six13log.log.app.application1- get_one_buf 11: get msg[1008] len[143], max_len [143]
+20120627 02:22:02.711 INFO     six13log.log.app.application1- store_role_handle: can not store role 1200
+
+20120627 02:22:02.711 DEBUG    six13log.log.app.application1- send_one_msg 11: send msg[1009] len[20], ret [20]
+20120627 02:22:02.711 TRACE    six13log.log.app.application1- remove_one_buf 11: msg[1008] len[143], reset_len [0]
+20120627 02:40:44.113 ERROR    six13log.log.app.application1- dbsrv_cb_server_recv: connect closed from fd 11
+20120627 02:40:44.113 DEBUG    six13log.log.app.application1- remove_listen_callback_event: close connect from fd 11
+20120627 02:40:44.113 DEBUG    six13log.log.app.application1- roledb_release_client_map: del_client_map [11] success

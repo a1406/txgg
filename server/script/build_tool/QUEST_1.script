@@ -1,0 +1,16 @@
+function OnQuestAccept_0()
+{
+//    ATM_PinstancePopupMessage("恭喜，你战胜了晶核地宫领主！");
+//    ATM_SetPinstanceCompleted();
+//    ATM_SmashAllMonsters();
+      printf("i am in %s %d\n", __FUNCTION__, __LINE__);
+      printf("name = %s\n", sc_get_cur_player_name());
+      return (0);
+}
+
+function OnQuestComplete_0()
+{
+      printf("i am in %s %d\n", __FUNCTION__, __LINE__);
+      printf("name = %s\n", sc_get_cur_player_name());
+      return (0);
+}

@@ -1,0 +1,32 @@
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[1424] pos_y[332]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[2071] pos_y[564]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[1780] pos_y[529]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[2183] pos_y[296]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[1402] pos_y[631]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[1225] pos_y[628]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[980] pos_y[500]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[40] pos_y[465]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[83] pos_y[366]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[1472] pos_y[391]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[1640] pos_y[489]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[634] pos_y[516]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[223] pos_y[648]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[725] pos_y[418]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[57] pos_y[528]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[952] pos_y[636]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[431] pos_y[313]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[472] pos_y[465]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[1720] pos_y[490]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[839] pos_y[616]!
+20120528 13:37:05.721 TRACE    test.log- start moving !
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: start at pos_x[190] pos_y[325]!
+20120528 13:37:05.721 DEBUG    test.log- execute_test_step: move to pos_x[883] pos_y[291]!

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE log4c SYSTEM "">
+
+<log4c version="1.2.1">
+
+	<config>
+		<bufsize>0</bufsize>
+		<debug level="2"/>
+		<nocleanup>0</nocleanup>
+		<reread>1</reread>
+	</config>
+
+	<category name="root" priority="notice"/>
+        <category name="six13log.log" priority="error" appender="stdout" />
+
+	<rollingpolicy name="myrollingpolicy" type="sizewin" maxsize="1073741824" maxnum="10" />
+
+	<rollingpolicy name="myrole111" type="sizewin" maxsize="1073741824" maxnum="10" />
+
+	<appender name="myrollingfileappender" type="rollingfile" logdir="./logs" prefix="game_srv" layout="dated" rollingpolicy="myrollingpolicy" />
+	<appender name="count_obj_appender" type="rollingfile" logdir="./logs" prefix="count_obj" layout="dated" rollingpolicy="myrole111" />
+
+	<layout name="basic" type="basic"/>
+	<layout name="dated" type="dated"/>
+	
+        <category name="count_obj_cate" priority="trace" appender="count_obj_appender" />
+        <category name="six13log.log.app" priority="trace" appender="myrollingfileappender" />
+
+</log4c>

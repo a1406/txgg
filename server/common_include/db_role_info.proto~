@@ -1,0 +1,13 @@
+message db_thing
+{
+	required uint32 id = 1;
+	required uint32 num = 2;
+	required uint32 pos = 3;
+}
+
+message db_bag
+{
+	required uint32 max_num = 1;
+	repeated db_thing things = 2;
+}
+

@@ -1,0 +1,66 @@
+message db_thing
+{
+	required uint32 id = 1;
+	required uint32 num = 2;
+	required uint32 pos = 3;
+}
+
+message db_bag
+{
+	required uint32 max_num = 1;
+	repeated db_thing things = 2;
+}
+
+message db_quest_progress
+{
+	required uint32 id = 1;               
+	required uint32 state = 2;           //状态
+	required uint32 accept_time = 3;     //任务领取时间
+	required uint32 cycle_num = 4;       //循环次数
+	required uint32 kill_npc1_num = 5;   //击杀Npc1数量
+	required uint32 kill_npc2_num = 6;
+	required uint32 kill_npc3_num = 7;
+	required uint32 collect_item1_num = 8;  //收集道具1数量
+	required uint32 collect_item2_num = 9;
+	required uint32 collect_item3_num = 10;
+}
+
+message db_quest_progress_list
+{
+	repeated db_quest_progress quest = 1;          //所有的已接任务的信息
+	required uint32 main_quest_index = 2;                        //进行中的主线任务id
+	repeated uint32 all_finished_slave_quest = 3 [packed=true];  //所有已经完成的支线任务的ID
+}
+
+message db_one_role
+{
+	required string name = 1;
+	required uint32 level = 2;
+	required uint32 prof = 3;
+	required uint32 exp = 4;
+
+	repeated uint32 equip = 5 [packed=true];
+	repeated uint32 skill = 6 [packed=true];
+	repeated uint32 active_skill = 7 [packed=true];
+}
+
+message db_shortcut
+{
+	required uint32 id = 1;
+	required int32 pos = 2;
+}
+
+message db_friend
+{
+	repeated uint64 friend = 1;	
+	repeated uint64 blacklist = 2;	
+}
+
+message db_blob_role_info
+{
+	required db_bag bag = 1;
+	required db_quest_progress_list quest = 2;
+	repeated db_one_role one_role = 3;
+	repeated db_shortcut shortcut = 4;
+	required db_friend game_friend = 5;
+}
